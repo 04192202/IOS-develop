@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdK-qv-Fpg">
+                                <rect key="frame" x="285.66666666666669" y="67" width="84.333333333333314" height="61.666666666666657"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="JOr-WM-O75" kind="presentation" id="NV6-YV-syg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20˚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-JH-KDl">
+                                <rect key="frame" x="201.66666666666663" y="164.66666666666666" width="164.33333333333337" height="119.99999999999997"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="YAB-lX-eqM">
+                                <rect key="frame" x="67" y="364.66666666666669" width="256" height="256.00000000000006"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取位置..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7K-jt-Rjb">
+                                <rect key="frame" x="14.333333333333329" y="746" width="155.66666666666669" height="40"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sgY-JH-KDl" firstAttribute="top" secondItem="jdK-qv-Fpg" secondAttribute="bottom" constant="36" id="IJb-Ll-Jc4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jdK-qv-Fpg" secondAttribute="trailing" constant="20" id="O24-LG-qGr"/>
+                            <constraint firstItem="YAB-lX-eqM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ryu-8V-wl9"/>
+                            <constraint firstItem="YAB-lX-eqM" firstAttribute="top" secondItem="sgY-JH-KDl" secondAttribute="bottom" constant="80" id="WYG-U4-l7t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sgY-JH-KDl" secondAttribute="trailing" constant="24" id="Wek-hF-zrA"/>
+                            <constraint firstItem="jdK-qv-Fpg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ag0-Wr-Vgm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M7K-jt-Rjb" secondAttribute="trailing" constant="220" id="bvs-V7-jmP"/>
+                            <constraint firstItem="sgY-JH-KDl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="d8L-gd-Bne"/>
+                            <constraint firstItem="jdK-qv-Fpg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="s8M-by-s7l"/>
+                            <constraint firstItem="M7K-jt-Rjb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xan-WF-AB7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M7K-jt-Rjb" secondAttribute="bottom" constant="24" id="xob-Ay-UKn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Xo-PM-LCE"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="M7K-jt-Rjb" id="j6w-1x-ZNA"/>
+                        <outlet property="iconImageView" destination="YAB-lX-eqM" id="muy-ge-vLt"/>
+                        <outlet property="tempLabel" destination="sgY-JH-KDl" id="cQM-X7-i8I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.615384615384613" y="3.5545023696682461"/>
+        </scene>
+        <!--Query View Controller-->
+        <scene sceneID="jLK-6U-RPn">
+            <objects>
+                <viewController id="JOr-WM-O75" customClass="QueryViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kch-sa-wc4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlM-Zh-7Lg">
+                                <rect key="frame" x="20" y="60" width="84.333333333333329" height="61.666666666666657"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward.2.circle.fill" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="back:" destination="JOr-WM-O75" eventType="touchUpInside" id="70y-B9-eaD"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hLQ-Iz-26C">
+                                <rect key="frame" x="79.666666666666671" y="201.66666666666666" width="230.66666666666663" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前城市：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6N-fB-tOw">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HE-de-BVK">
+                                        <rect key="frame" x="159.66666666666669" y="0.0" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Lzv-YZ-dhk">
+                                <rect key="frame" x="78" y="297.66666666666669" width="234" height="124"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入城市名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eug-tg-4gD">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZv-Sb-XfZ">
+                                        <rect key="frame" x="0.0" y="76" width="234" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="查询天气">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="query:" destination="JOr-WM-O75" eventType="touchUpInside" id="2eR-kO-JMC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KTZ-d2-XgN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hLQ-Iz-26C" firstAttribute="centerX" secondItem="Kch-sa-wc4" secondAttribute="centerX" id="HzY-M9-C4D"/>
+                            <constraint firstItem="Lzv-YZ-dhk" firstAttribute="centerX" secondItem="Kch-sa-wc4" secondAttribute="centerX" id="Oc0-fO-Yik"/>
+                            <constraint firstItem="MlM-Zh-7Lg" firstAttribute="top" secondItem="Kch-sa-wc4" secondAttribute="top" constant="60" id="Qa2-dU-Ixc"/>
+                            <constraint firstItem="KTZ-d2-XgN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MlM-Zh-7Lg" secondAttribute="trailing" symbolic="YES" id="U7j-Ib-koe"/>
+                            <constraint firstItem="Lzv-YZ-dhk" firstAttribute="top" secondItem="hLQ-Iz-26C" secondAttribute="bottom" constant="60" id="WLS-cM-1oQ"/>
+                            <constraint firstItem="MlM-Zh-7Lg" firstAttribute="leading" secondItem="Kch-sa-wc4" secondAttribute="leading" constant="20" id="mGu-O3-cxu"/>
+                            <constraint firstItem="Lzv-YZ-dhk" firstAttribute="width" secondItem="Kch-sa-wc4" secondAttribute="width" multiplier="0.6" id="sB2-dH-E5g"/>
+                            <constraint firstItem="hLQ-Iz-26C" firstAttribute="top" secondItem="MlM-Zh-7Lg" secondAttribute="bottom" constant="80" id="zOt-pE-OXH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="citytextfield" destination="eug-tg-4gD" id="9Lt-7j-Jqn"/>
+                        <outlet property="currentCityLabel" destination="8HE-de-BVK" id="uL1-Db-u4v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCC-ZZ-Mwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="100" width="256" height="256"/>
+        <image name="arrowshape.turn.up.backward.2.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
